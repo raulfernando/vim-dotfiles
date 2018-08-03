@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/raul/projetos/billimatic/app/controllers/concerns/invoices'
-let g:netrw_dirhist_2='/home/raul/projetos/billimatic/app/controllers/concerns'
-let g:netrw_dirhist_3='/home/raul/projetos/billimatic/app/controllers'
-let g:netrw_dirhist_4='/home/raul/projetos/billimatic/app/views/invoice_rules'
