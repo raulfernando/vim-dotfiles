@@ -1,0 +1,26 @@
+let mapleader="\<space>"
+
+nnoremap <leader>; A;<esc>
+nnoremap <leader>q :q!<esc>
+nnoremap <leader>w :w!<esc>
+nnoremap <leader><Tab> gt<esc>
+nnoremap <leader>o :tabedit
+nnoremap <leader>p :Files<cr>
+nnoremap <leader>n :NERDTree<cr>
+nnoremap <leader>e :Explore<cr>
+
+" mappings para rodar rspec no vim
+nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
+nnoremap <Leader>s :call RunNearestSpec()<CR>
+nnoremap <Leader>l :call RunLastSpec()<CR>
+nnoremap <Leader>a :call RunAllSpecs()<CR>
+
+"resize current buffer by +/- 5
+nnoremap <C-left> :vertical resize -5<cr>
+nnoremap <C-down> :resize +5<cr>
+nnoremap <C-up> :resize -5<cr>
+nnoremap <C-right> :vertical resize +5<cr>
+
+set hidden
+nnoremap <leader>. :bnext<CR>
+nnoremap <leader>, :bprev<CR>
