@@ -1,3 +1,4 @@
+set nocompatible
 " esquema de cores
 set background=dark
 colorscheme material-monokai
@@ -21,7 +22,7 @@ set backspace=2
 " Numera as linhas
 set number
 
-" Feedback de busca em tempo real 
+" Feedback de busca em tempo real
 set incsearch
 
 " Destaque nos resultados
@@ -96,3 +97,5 @@ set tabstop=2
 set rtp+=/usr/local/opt/fzf
 
 set t_Co=256
+
+set hidden
