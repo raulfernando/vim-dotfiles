@@ -4,6 +4,14 @@ set background=dark
 colorscheme material-monokai
 let g:materialmonokai_subtle_spell=1
 
+" Ativa copia para o clipboard da maquina
+set clipboard+=unnamedplus
+
+" Ativa preview no replace
+if has('nvim')
+  set inccommand=split
+endif
+
 " Tamanho da identação
 set tabstop=2
 
