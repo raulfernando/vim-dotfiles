@@ -1,4 +1,8 @@
 set nocompatible
+
+" Altera o updatetime
+set updatetime=100
+
 " esquema de cores
 set background=dark
 colorscheme material-monokai

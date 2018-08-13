@@ -8,6 +8,7 @@ nnoremap <leader>o :tabedit
 nnoremap <leader>p :Files<cr>
 nnoremap <leader>n :NERDTree<cr>
 nnoremap <leader>e :Explore<cr>
+nnoremap <leader>f :Ag<space>
 
 " mappings para rodar rspec no vim
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
@@ -51,11 +52,23 @@ let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
-let g:airline_theme='deus'
+" Use patched fonts
 let g:airline_powerline_fonts = 1
-" let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#show_tabs = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+" enable/disable fugitive/lawrencium integration
+let g:airline#extensions#branch#enabled = 1
+" enable/disable showing a summary of changed hunks under source control.
+let g:airline#extensions#hunks#enabled = 1
+" enable/disable showing only non-zero hunks.
+let g:airline#extensions#hunks#non_zero_only = 1
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline_theme='deus'
+let g:airline#extensions#ale#enabled = 1
 
 " config para rodar o rspec no vim
 let g:rspec_runner = "os_x_iterm2"
