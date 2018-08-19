@@ -41,6 +41,8 @@ nnoremap <leader>8 :b8<CR>
 nnoremap <leader>9 :b9<CR>
 nnoremap <leader>0 :b10<CR>
 
+let g:ale_set_highlights = 0
+
 let g:SuperTabDefaultCompletionType    = '<C-n>'
 let g:SuperTabCrMapping                = 0
 let g:UltiSnipsExpandTrigger           = '<tab>'
@@ -69,6 +71,7 @@ let g:airline#extensions#hunks#non_zero_only = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_theme='deus'
 let g:airline#extensions#ale#enabled = 1
+let g:airline_section_b = '%{strftime("%H:%M")}'
 
 " config para rodar o rspec no vim
 let g:rspec_runner = "os_x_iterm2"
