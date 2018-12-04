@@ -1,7 +1,8 @@
 let mapleader="\<space>"
 
 nnoremap <leader>; A;<esc>
-nnoremap <leader>q :q!<esc>
+nnoremap <leader>q :bd<esc>
+nnoremap <leader>Q :q!<esc>
 nnoremap <leader>w :w!<esc>
 nnoremap <leader><Tab> gt<esc>
 nnoremap <leader>o :tabedit
