@@ -3,6 +3,9 @@ set nocompatible
 " Altera o updatetime
 set updatetime=100
 
+" Set o relativenumber
+set relativenumber
+
 " esquema de cores
 set background=dark
 colorscheme material-monokai
@@ -106,7 +109,8 @@ set smarttab
 set shiftwidth=2
 set tabstop=2
 
-set rtp+=/usr/local/opt/fzf
+" set rtp+=/usr/local/opt/fzf
+set rtp+=~/.fzf
 
 set t_Co=256
 

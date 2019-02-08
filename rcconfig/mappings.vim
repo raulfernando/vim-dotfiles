@@ -6,7 +6,7 @@ nnoremap <leader>Q :q!<esc>
 nnoremap <leader>w :w!<esc>
 nnoremap <leader><Tab> gt<esc>
 nnoremap <leader>o :tabedit
-nnoremap <leader>p :Files<cr>
+nnoremap <leader>p :FZF<cr>
 nnoremap <leader>n :NERDTree<cr>
 nnoremap <leader>e :Explore<cr>
 nnoremap <leader>f :Ag<space>
@@ -41,6 +41,12 @@ nnoremap <leader>7 :b7<CR>
 nnoremap <leader>8 :b8<CR>
 nnoremap <leader>9 :b9<CR>
 nnoremap <leader>0 :b10<CR>
+
+" disable arrows
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 
 let g:ale_set_highlights = 0
 
