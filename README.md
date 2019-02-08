@@ -29,14 +29,6 @@ And ignore the files
 
 :help nvim-from-vim
 
-
-To start the transition, create ~/.config/nvim/init.vim with these contents:
-  set runtimepath^=~/.vim runtimepath+=~/.vim/after
-  let &packpath = &runtimepath
-  source ~/.vimrc
-
-And reexecute all again on nvim
-
 # Utils
 
 list git commits
