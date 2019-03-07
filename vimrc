@@ -1,5 +1,4 @@
-syntax enable
-autocmd!
+syntax on
 autocmd BufWritePre * %s/\s\+$//e
 
 function! s:SourceConfigFilesIn(directory)

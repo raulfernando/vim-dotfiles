@@ -115,3 +115,5 @@ set rtp+=~/.fzf
 set t_Co=256
 
 set hidden
+
+set tags=tags

@@ -26,10 +26,10 @@ nnoremap <C-right> :vertical resize +5<cr>
 nnoremap <leader>. :bnext<CR>
 nnoremap <leader>, :bprev<CR>
 
-nnoremap <A-Up> :m-2<CR>
-nnoremap <A-Down> :m+<CR>
-inoremap <A-Up> <Esc>:m-2<CR>
-inoremap <A-Down> <Esc>:m+<CR>
+nnoremap <A-k> :m-2<CR>
+nnoremap <A-j> :m+<CR>
+inoremap <A-k> <Esc>:m-2<CR>
+inoremap <A-j> <Esc>:m+<CR>
 
 nnoremap <leader>1 :b1<CR>
 nnoremap <leader>2 :b2<CR>
