@@ -28,3 +28,8 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-sleuth'
+Plug 'lmeijvogel/vim-yaml-helper'
+Plug 'dyng/ctrlsf.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}

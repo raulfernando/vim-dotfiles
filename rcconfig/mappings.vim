@@ -18,29 +18,18 @@ nnoremap <Leader>l :call RunLastSpec()<CR>
 nnoremap <Leader>a :call RunAllSpecs()<CR>
 
 "resize current buffer by +/- 5
-nnoremap <C-left> :vertical resize -5<cr>
-nnoremap <C-down> :resize +5<cr>
-nnoremap <C-up> :resize -5<cr>
-nnoremap <C-right> :vertical resize +5<cr>
+nnoremap <C-h> :vertical resize -5<cr>
+nnoremap <C-j> :resize +5<cr>
+nnoremap <C-k> :resize -5<cr>
+nnoremap <C-l> :vertical resize +5<cr>
 
-nnoremap <leader>. :bnext<CR>
-nnoremap <leader>, :bprev<CR>
+nnoremap <leader>l :bnext<CR>
+nnoremap <leader>h :bprev<CR>
 
 nnoremap <A-k> :m-2<CR>
 nnoremap <A-j> :m+<CR>
 inoremap <A-k> <Esc>:m-2<CR>
 inoremap <A-j> <Esc>:m+<CR>
-
-nnoremap <leader>1 :b1<CR>
-nnoremap <leader>2 :b2<CR>
-nnoremap <leader>3 :b3<CR>
-nnoremap <leader>4 :b4<CR>
-nnoremap <leader>5 :b5<CR>
-nnoremap <leader>6 :b6<CR>
-nnoremap <leader>7 :b7<CR>
-nnoremap <leader>8 :b8<CR>
-nnoremap <leader>9 :b9<CR>
-nnoremap <leader>0 :b10<CR>
 
 " disable arrows
 nnoremap <Left> :echoe "Use h"<CR>
@@ -83,3 +72,26 @@ let g:airline_section_b = '%{strftime("%H:%M")}'
 " config para rodar o rspec no vim
 let g:rspec_runner = "os_x_iterm2"
 let g:rspec_command = "Dispatch rspec {spec}"
+
+" emmet
+let g:user_emmet_leader_key='<C-Z>'
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+
+
+"--=language client=--
+"\ 'ruby': ['tcp://localhost:7658']
+let g:LanguageClient_autoStop = 0
+let g:LanguageClient_serverCommands = {
+    \ 'ruby': ['tcp://localhost:7658']
+    \ }
+
+let g:LanguageClient_autoStart = 1
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
+autocmd FileType ruby setlocal omnifunc=LanguageClient#complete
