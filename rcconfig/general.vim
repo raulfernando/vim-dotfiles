@@ -117,3 +117,5 @@ set t_Co=256
 set hidden
 
 set tags=tags
+
+set mouse=a
