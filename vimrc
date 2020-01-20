@@ -16,16 +16,19 @@ call plug#begin('~/.vim/plugged')
 call s:SourceConfigFilesIn('plugins')
 call plug#end()
 
+" Preview in :Ag
+" command! -bang -nargs=* Ag
+"   \ call fzf#vim#ag(<q-args>,
+"   \                 <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
+"   \                         : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
+"   \                 <bang>0)
+"
 command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>,
   \                 <bang>0 ? fzf#vim#with_preview('up:60%')
   \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
   \                 <bang>0)
 
-" command! -bang -nargs=* Ag
-"   \ call fzf#vim#ag(<q-args>,
-"                     {'options': '--delimiter : --nth 4..'},
-"                     <bang>0)
-
+" Preview in :Files
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)

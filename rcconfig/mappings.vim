@@ -11,6 +11,10 @@ nnoremap <leader>n :NERDTree<cr>
 nnoremap <leader>e :Explore<cr>
 nnoremap <leader>f :Ag!<cr>
 
+let g:vimrubocop_keymap = 0
+nmap <Leader>r :RuboCop -a<CR>
+nmap <Leader>ra :RuboCop -l<CR>
+
 " mappings para rodar rspec no vim
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
@@ -18,13 +22,13 @@ nnoremap <Leader>l :call RunLastSpec()<CR>
 nnoremap <Leader>a :call RunAllSpecs()<CR>
 
 "resize current buffer by +/- 5
-nnoremap <C-h> :vertical resize -5<cr>
-nnoremap <C-j> :resize +5<cr>
-nnoremap <C-k> :resize -5<cr>
-nnoremap <C-l> :vertical resize +5<cr>
+nnoremap <C-A-H> :vertical resize -5<cr>
+nnoremap <C-A-J> :resize +5<cr>
+nnoremap <C-A-K> :resize -5<cr>
+nnoremap <C-A-L> :vertical resize +5<cr>
 
-nnoremap <leader>l :bnext<CR>
-nnoremap <leader>h :bprev<CR>
+nnoremap w :bnext<CR>
+nnoremap q :bprev<CR>
 
 nnoremap <A-k> :m-2<CR>
 nnoremap <A-j> :m+<CR>
@@ -70,19 +74,41 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline_section_b = '%{strftime("%H:%M")}'
 
 " config para rodar o rspec no vim
-let g:rspec_runner = "os_x_iterm2"
-let g:rspec_command = "Dispatch rspec {spec}"
+let g:rspec_command = "Dispatch! rspec {spec}"
 
 " emmet
 let g:user_emmet_leader_key='<C-Z>'
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
+" autocomplete
+let g:deoplete#enable_ignore_case = 0
+let g:deoplete#enable_smart_case = 0
+let g:deoplete#delimiters = ['/', '.', '::', ':', '#']
+let g:deoplete#max_list = 5
+let g:deoplete#auto_complete_delay = 0
+let g:deoplete#auto_refresh_delay = 0
+let g:neocomplete#min_pattern_length = 2
 
 let g:ale_fix_on_save = 0
 let g:ale_fixers = {'ruby': ['rubocop']}
 
 let g:gist_use_password_in_gitconfig = 1
+
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+ \ 'bg':      ['bg', 'Normal'],
+ \ 'hl':      ['fg', 'Comment'],
+ \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+ \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+ \ 'hl+':     ['fg', 'Statement'],
+ \ 'info':    ['fg', 'PreProc'],
+ \ 'border':  ['fg', 'Ignore'],
+ \ 'prompt':  ['fg', 'Conditional'],
+ \ 'pointer': ['fg', 'Exception'],
+ \ 'marker':  ['fg', 'Keyword'],
+ \ 'spinner': ['fg', 'Label'],
+ \ 'header':  ['fg', 'Comment'] }
 
 com! FormatJSON :%!jq '.'
 com! MinifyJSON :%!jq -c '.'
